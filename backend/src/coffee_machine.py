@@ -49,3 +49,9 @@ class CoffeeMachine:
 
     def get_left_ingredients(self) -> str:
         return f'Зерна: {self.coffee_beans}гр, Вода: {self.water}мл, Молоко: {self.milk}мл'
+    
+    def clean_machine(self) -> str:
+        if self.brewed_coffee_count > 0:
+            self.brewed_coffee_count = 0
+            return "Кофе-машина успешно очищена!"
+        return "Кофе-машина уже чистая!"
